@@ -102,8 +102,9 @@ function decode() {
 }
 
 // Desafio 10
-function techList() {
+function techList(techArray, name) {
   // seu código aqui
+  return [...techArray].map((tech) => ({ tech, name }));
 }
 
 // Desafio 11
