@@ -64,7 +64,6 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(numberArray) {
   // seu código aqui
   const array = [...numberArray];
-  console.log(array);
 
   const mappingNewArray = array.map((number) => {
     if (number % 3 === 0 && number % 5 !== 0) return "fizz";
@@ -77,9 +76,27 @@ function fizzBuzz(numberArray) {
 }
 
 // Desafio 9
-function encode() {
+/**
+ *
+ * @param {*} A : string
+ */
+function encode(A) {
   // seu código aqui
+  const fromStringToArray = [...A];
+
+  const replaceLetterToNumber = fromStringToArray.map((letter) => {
+    if (letter.toLowerCase() === "a") return 1;
+    if (letter.toLowerCase() === "e") return 2;
+    if (letter.toLowerCase() === "i") return 3;
+    if (letter.toLowerCase() === "o") return 4;
+    if (letter.toLowerCase() === "u") return 5;
+
+    return letter;
+  });
+
+  return replaceLetterToNumber.toString().replaceAll(",", "");
 }
+
 function decode() {
   // seu código aqui
 }
